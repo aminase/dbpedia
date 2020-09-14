@@ -1,0 +1,40 @@
+{
+  "name": "db-pedia",
+  "author": "aminase",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/lodash": "^4.14.161",
+    "cra-template-typescript-redux": "0.2.29",
+    "lodash": "^4.17.20",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "tailwindcss": "^1.8.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./",
+    "fix": "eslint --ext .js,.jsx,.ts,.tsx  --fix ./",
+    "build:css": "tailwind build src/style.css -o public/styles.css"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
