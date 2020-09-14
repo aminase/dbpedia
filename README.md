@@ -1,4 +1,4 @@
-# A quick start Redux + TypeScript Create React App template
+# A DB pedia project
 
 ## Available Scripts
 
