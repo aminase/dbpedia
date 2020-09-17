@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import _ from 'lodash'
 
-const API_ROOT = 'http://dbpedia.org'
+const API_ROOT = 'http://dbpedia.org/data/Matteo_Donati.json'
 
 export const Home: React.FC = () => {
   const [data, setData] = useState({ hits: [] })
@@ -14,16 +14,24 @@ export const Home: React.FC = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(`${API_ROOT}/resource/Matteo_Donati`)
+      const response = await axios.get(`${API_ROOT}/Matteo_Donati.json`)
       console.log(response, 'result 1')
 
-      const height = _.get(response, `${API_ROOT}/ontology/height`, 'value')
+      const height = _.get(response, `${API_ROOT}/ontology/height`, '')
       console.log(height, 'height')
     }
     fetchData()
   }, [])
 
+  const parsing = parseInt('4F', 16)
+  console.log(parsing, 'parse')
+
   const searchItem = (e: any) => {}
+
+  const firstObject = { name: 'Edo' }
+  firstObject.name = 'Amina'
+
+  console.log(firstObject, 'objc')
 
   return (
     <div className="m-10">
@@ -33,6 +41,7 @@ export const Home: React.FC = () => {
         type="text"
         onChange={(e) => searchItem(e)}
       />
+
       {/* {data.hits.map((item) => (
           <li key={item.objectID}>
             <a href={item.url}>{item.title}</a>
