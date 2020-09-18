@@ -43,9 +43,6 @@ export const Home: React.FC = () => {
     } else {
       setError('No matching dbpedia data found')
     }
-
-    console.log('searchTerm---', searchTerm)
-    console.log('dataSubset---', dataSubset)
   }
 
   return (
